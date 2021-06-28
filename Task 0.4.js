@@ -1,8 +1,5 @@
-function even_or_odd(num){
-    if(num %2 == 0)
-        return "even";
-    return "odd";
-}
+function even_or_odd(n) { return (n % 2 == 0); }
+ 
 
-
-console.log(even_or_odd(20));
+    let n = 2;
+    even_or_odd(n) ? console.log("Even") :console.log("Odd");
