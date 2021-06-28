@@ -1,10 +1,10 @@
-function hourConverter(n) {
-    const num = n;
-    const hours = (num / 60);
-    const rhours = Math.floor(hours);
-    const minutes = (hours - rhours) * 60;
-    const rminutes = Math.round(minutes);
-    return  rhours + " hour(s) and " + rminutes + " minute(s).";
-    }
-    
-    console.log(hourConverter(1000));
+function number_to_hour_and_min(input) {
+    input = Number(input);
+    var hours = Math.floor(input / 60);
+    var minutes = Math.floor(input -hours * 60);
+
+    var hour_Display = hours > 0 ? hours + (hours == 1 ? " hour " : " hours ") : "";
+    var minutes_Display = minutes > 0 ? minutes + (minutes == 1 ? ", minute " : " minutes ") : "";
+    return hour_Display + minutes_Display ; 
+}
+console.log(number_to_hour_and_min(130));
